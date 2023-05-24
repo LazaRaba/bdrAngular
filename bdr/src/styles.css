@@ -1,1 +1,701 @@
 /* You can add global styles to this file, and also import other style files */
+/*------------------*
+# Body
+*-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+:root{
+    --main-color:#f2f2f2;
+    --main-color-blue:#1ebed6;
+    --main-color-black:#111;
+    --main-color-orange:#F2790F;
+    --main-color-green:#478056;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    visibility: visible;
+    background-color: #ebecf1;
+    font-family: 'Comfortaa', cursive;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/*------------------*
+# Headings
+*-------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-top: 0;
+    font-style: normal;
+    text-transform: normal;
+    font-family: 'Pacifico', cursive;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a{
+    color: inherit;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.b{
+    border: 3px solid rgb(37, 8, 221);
+}
+
+.r{
+    border: 3px solid rgb(221, 8, 8);
+}
+
+/*------------------*
+# Positionnement
+*-------------------*/
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.fixed{
+    position: fixed;
+}
+
+.sticky{
+    position: sticky;
+}
+
+.fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.fixed-bottom{
+    position: fixed;
+    right:0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.sticky-top{
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.tc{
+    text-align: center;
+}
+
+.tl{
+    text-align: left;
+}
+
+.tr{
+    text-align: right;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/*------------------*
+# Type affichage
+*-------------------*/
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+.inline-block{
+    display: inline;
+}
+
+.flex{
+    display: flex;
+}
+
+/*------------------*
+# Button
+*-------------------*/
+
+.btn, button{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    appearance: auto;
+    background-color:var(--main-color-orange);
+    margin: 5px;
+}
+
+.btn.btn-medium, button.btn-medium{
+    font-size: medium;
+}
+
+.btn.btn-large, button.btn-large{
+    font-size: large;
+}
+
+.btn.btn-small, button.btn-small{
+    font-size: small;
+}
+
+/*------------------*
+# Margin et padding
+*-------------------*/
+/** padding top*/
+
+.pt-5{
+    padding-top: 5px;
+}
+
+.pt-10{
+    padding-top: 10px;
+}
+
+.pt-15{
+    padding-top: 15px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}
+
+.pt-25{
+    padding-top: 25px;
+}
+
+.pt-30{
+    padding-top: 30px;
+}
+
+.pt-35{
+    padding-top: 35px;
+}
+
+.pt-40{
+    padding-top: 40px;
+}
+
+/** padding bottom **/
+
+.pb-5{
+    padding-bottom: 5px;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+
+.pb-15{
+    padding-bottom: 15px;
+}
+
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.pb-25{
+    padding-bottom: 25px;
+}
+
+.pb-30{
+    padding-bottom: 30px;
+}
+
+.pb-35{
+    padding-bottom: 35px;
+}
+
+.pb-40{
+    padding-bottom: 40px;
+}
+
+/** padding top and bottom **/
+
+.py-5{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.py-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.py-15{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.py-20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-25{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.py-30{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.py-35{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+
+.py-40{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/** padding left and right **/
+
+.px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.px-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.px-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.px-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.px-20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.px-25{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.px-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.px-35{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+
+.px-40{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/** Margin top **/
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mt-15{
+    margin-top: 15px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-25{
+    margin-top: 25px;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+.mt-35{
+    margin-top: 35px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+
+
+
+/** Margin Bottom **/
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mb-25{
+    margin-bottom: 25px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-35{
+    margin-bottom: 35px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+/** Margin left **/
+
+.ml-5{
+    margin-left: 5px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.ml-15{
+    margin-left: 15px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+
+.ml-25{
+    margin-left: 25px;
+}
+
+.ml-30{
+    margin-left: 30px;
+}
+
+.ml-35{
+    margin-left: 35px;
+}
+
+.ml-40{
+    margin-left: 40px;
+}
+
+/** Margin right **/
+
+.mr-5{
+    margin-right: 5px;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.mr-15{
+    margin-right: 15px;
+}
+
+.mr-20{
+    margin-right: 20px;
+}
+
+.mr-25{
+    margin-right: 25px;
+}
+
+.mr-30{
+    margin-right: 30px;
+}
+
+.mr-35{
+    margin-right: 35px;
+}
+
+.mr-40{
+    margin-right: 40px;
+}
+
+/** margin top and bottom **/
+
+.my-5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.my-10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-15{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.my-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my-25{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.my-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.my-35{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.my-40{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/** margin left and right **/
+
+.mx-5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mx-10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mx-15{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mx-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mx-25{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mx-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.mx-35{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+
+.mx-40{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*------------------*
+# FlexBox
+*-------------------*/
+
+.row, .flex{
+    display: flex;
+}
+
+.col-center, .aic{
+    align-items: center;
+}
+
+.row-center, .jcc{
+    justify-content: center;
+}
+
+.row-sb, .jcsb{
+    justify-content: space-between;
+}
+
+.row-sa, .jcsa{
+    justify-content: space-around;
+}
+
+.row-se, .jcse{
+    justify-content: space-evenly;
+}
+
+.aifs{
+    align-self: flex-start;
+}
+
+.aife{
+    align-self: flex-end;
+}
+
+.aic{
+    align-items:center;
+}
+
+.fdc{
+    flex-direction: column;
+}
+/*------------------*
+# Flex
+*-------------------*/
+
+.flex-1{
+    flex: 1;
+}
+
+.flex-2{
+    flex: 2;
+}
+
+.flex-5{
+    flex: 5;
+}
+
+.flex-5{
+    flex: 5;
+}
+
+.flex-5{
+    flex: 5;
+}
+
+/*------------------*
+# Flex Gap
+*-------------------*/
+
+.gap-5{
+    gap: 5px;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.gap-15{
+    gap: 15px;
+}
+
+.gap-20{
+    gap: 20px;
+}
+
+.gap-25{
+    gap: 25px;
+}
+
+/*------------------*
+# container
+*-------------------*/
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm{
+    width: 100vw;
+    padding-right:0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px){
+    .container-sm, .container {
+        max-width: 540px;
+    }
+} 
+
+@media (min-width: 768px){
+    .container-md, .container-sm, .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container-lg, .container-md, .container-sm, .container {
+        max-width: 960px;
+    }
+} 
+
+@media (min-width: 1200px){
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px){
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1320px;
+    }
+}
