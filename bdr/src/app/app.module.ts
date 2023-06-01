@@ -8,6 +8,11 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
+import { ContactComponent } from './components/homeContent/contact/contact.component';
+import { SliderComponent } from './components/homeContent/slider/slider.component';
+import { AboutUsComponent } from './components/homeContent/about-us/about-us.component';
+import { SeparatorComponent } from './components/homeContent/separator/separator.component';
+import { SliderModule } from './components/homeContent/slider/slider.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,17 @@ import { ContainerComponent } from './components/container/container.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ContainerComponent
+    ContainerComponent,
+    ContactComponent,
+    SliderComponent,
+    AboutUsComponent,
+    SeparatorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

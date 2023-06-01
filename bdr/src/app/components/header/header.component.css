@@ -1,0 +1,21 @@
+header{
+    background: var(--main-color-green);
+    color: var(--main-color);
+    height: 10vh;
+    font-size: 16px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%; 
+}
+
+.logo{
+    margin-left: 5px;
+}
+
+.ul{
+    margin-right: 5px;
+}
