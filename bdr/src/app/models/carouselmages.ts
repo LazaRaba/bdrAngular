@@ -1,4 +1,4 @@
-export interface SliderImage {
+export interface CarouselImages {
     imageSrc: string;
     imageAlt: string;
 }

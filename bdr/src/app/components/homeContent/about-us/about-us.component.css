@@ -1,9 +1,12 @@
 .container-apropos {
     flex-direction: column;
     overflow: hidden;
+    font-family: 'Comfortaa', cursive;
 
 }
-
+h2, h3{
+    font-family: 'Pacifico', cursive;
+}
 .aboutUs {
     display: flex;
     align-items: center;
@@ -17,7 +20,7 @@
 
 .aboutUs .titreAboutUs {
     color: #478056;
-    font-size: 3em;
+    font-size: calc(1.4962rem + 0.5038vw + ((100vw - 21.05rem) * (1.5048 - 1) / (85 - 21.05)));
     text-decoration: underline;
     margin: 0;
     margin-bottom: 3px;
@@ -31,14 +34,14 @@
 }
 
 .aboutUs .left h2 {
-    font-size: 1.9em;
+    font-size: clamp(1.125rem, 0.9906rem + 0.6719vw, 1.6625rem);
     color: #F2790F;
     font-family: 'Comfortaa', cursive;
     text-align: center;
 }
 
 .aboutUs .right {
-    font-size: 1.2em;
+    font-size:calc(0.875rem + 0.391vw + ((1.2rem - 0.875rem) * ((100vw - 21rem) / (85 - 21))));
     color: #111;
     padding-left: 25px;
     border-left: solid 3px var(--main-color-green);
@@ -110,7 +113,7 @@
     height: 40px;
     position: absolute;
     opacity: 0.9; 
-    animation: wagon-rebond ease-in-out 5s infinite;
+    animation: wagon-rebond ease-in-out 1s infinite;
     z-index: 1;
 }
 
@@ -119,7 +122,9 @@
     height: 100%;
 }
 
-@keyframes wagon-rebond { 10% { bottom:  1em; opacity: 0.8; } 100% { bottom:  1em; opacity: 0.6 scale(2); } }
+
+
+@keyframes wagon-rebond { 10% { bottom:  1em; opacity: 0.8; } 100% { bottom:  1em; opacity: 0.6 scale(1.2); } }
 
 .card-img {
     position: absolute;
@@ -177,7 +182,7 @@
     padding-top: 20px;
     color: var(--main-color);
     text-transform: capitalize;
-    font-size: 50px;
+    /* font-size: 30px; */
     margin-top: 0;
     z-index: 2;
     opacity: 0;
@@ -185,11 +190,16 @@
 }
 
 .content h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: underline;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 1px;
     padding: 0;
+}
+
+.content p {
+    font-size: 0.8em;
+    margin-top: 0.2em;
 }
 
 .content h2,
@@ -263,13 +273,13 @@ p {
         flex-direction: column;
         box-sizing: content-box;
         width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
     }
 
     .aboutUs .left {
-        width: 50vw;
-        height: 25vh;
-        flex: 1;
-        align-items: center;
+        display: none;
     }
 
     .aboutUs .left h3 {

@@ -9,10 +9,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ContactComponent } from './components/homeContent/contact/contact.component';
-import { SliderComponent } from './components/homeContent/slider/slider.component';
 import { AboutUsComponent } from './components/homeContent/about-us/about-us.component';
 import { SeparatorComponent } from './components/homeContent/separator/separator.component';
-import { SliderModule } from './components/homeContent/slider/slider.module';
+import { CarouselModule } from './components/carousel/carousel.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +23,6 @@ import { SliderModule } from './components/homeContent/slider/slider.module';
     FooterComponent,
     ContainerComponent,
     ContactComponent,
-    SliderComponent,
     AboutUsComponent,
     SeparatorComponent
   ],
@@ -30,7 +30,8 @@ import { SliderModule } from './components/homeContent/slider/slider.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SliderModule
+    CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

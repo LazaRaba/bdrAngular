@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// import { ContactService } from 'src/app/services/contact.service';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
 
 }
