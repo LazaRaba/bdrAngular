@@ -8,6 +8,7 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     font-family: 'Comfortaa', cursive;
+    width: 100vw;
 }
 
 .navbar {
@@ -84,7 +85,7 @@ nav ul li a:hover .icon i img {
 }
 
 
-@media(max-width:768px) {
+@media(max-width:992px) {
     .header {
         width: 100%;
     }

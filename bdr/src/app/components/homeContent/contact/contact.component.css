@@ -1,152 +1,113 @@
-.contactMere{
-    padding-top: 30px;
-    position: relative;
-}
-h3, h4{
-    font-family: 'Pacifico', cursive;
-}
-
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background:no-repeat url(/assets/images/imagesBdr/deco/rainbow.png); 
-    
-}
-.titreContact h3{
-    color: #478056;
-    font-size: 3em;
-    text-decoration: underline ;
-    margin: 0;
-    text-underline-offset: 0.8rem;
-    text-decoration-thickness: 1px ;
-    
-}
-
-.contact-box {
-    width: 80%;
-    margin: 60px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.contact-list h3{
-    color: var(--main-color);
-    font-size: 2em;
-    transform: translate(-50%, -50);
-    text-align: center;
-    padding-bottom: 40px;
-    text-decoration: underline ;
-    text-underline-offset: 0.3rem;
-    text-decoration-thickness: 1px;
-    
-}
-
-::placeholder{
-    color:var(--main-color-black);
-    opacity: 0.5;
-    padding-left: 5px;
-}
-
-
-.contact-list-item{
-    height: 100%;
-
-}
-
-.contact-list,
-.contact-form-wrapper {
-    width: 50%;
-    /* padding: 0 0% 10% 0%; */
-    height: 500px;
-}
-
-.contact-list {
-    background-color:var(--main-color-green);
-    border-radius: 10px 0 0 10px;
-}
-
-.contact-list p{
-    font-size: 1.2em;
-    margin: 1.4em auto 7px auto;
-    width: 80%;
-    text-align: center;
-}
-
-.tel {
-    width: 80%;
-    margin: 5px  auto;
-}
-
-.tel p{
-    padding: 0;
-    margin: 3px;
-}
-
-.tel p:first-child{
-    font-family: 'Pacifico', cursive;
-    font-size: 1.4em;
-}
-
-.contact-list h3{
-    color: var(--main-color);
-}
-
-.contact-list h4 {
+.contactMere {
+    box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
-    color: #ffffd6;
-    font-size: 1.7em;
-    margin-left: 2.5em;
-    
+    margin: 40px;
 }
 
-.contact-list h4 i img{
-    width: 1.2em;
-    height: 1.2em;
+/* ----------Titre Contact---------- */
+.titreContact {
+    text-align: center;
+    padding: 2em 0;
 }
 
-.contact-list h4 span{
-    text-decoration: underline ;
-    text-underline-offset: 0.3rem;
+.titreContact h3 {
+    font-family: 'Pacifico', cursive;
+    color: var(--main-color-green);
+    font-size: calc(1.4962rem + 0.5038vw + ((100vw - 21.05rem) * (1.5048 - 1) / (85 - 21.05)));
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
     text-decoration-thickness: 1px;
 }
 
-.list{
-    padding-bottom: 1em;
+/* ----------Les boites------------- */
+.contact-box {
+    display: flex;
+    margin-bottom: 4em;
 }
 
+.contact-form-wrapper,
+.contact-list {
+    flex: 1;
+}
+
+/* -----------Coté gauche vert---------- */
+.contact-list {
+    background: var(--main-color-green);
+    padding: 2em 0;
+
+}
+
+.contact-list h3 {
+    color: var(--main-color);
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: calc(1.2rem + 0.5038vw + ((100vw - 21.05rem) * (1.5048 - 1) / (85 - 21.05)));
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 1px;
+}
+
+.contact-list h4 i img {
+    width: 1.8em;
+    height: 1.8em;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 0.5em;
+}
+
+.list {
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.2em;
+}
+
+.list p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.list .tel p:first-child {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 1px;
+}
+
+
+/* -----------Coté droit formulaire---------- */
 .contact-form-wrapper {
-    border-radius: 0 10px 10px 0;
     background: url(/assets/images/imagesBdr/deco/baby.jpg);
-    background-size:cover;
+    background-size: cover;
 }
 
-label{
-    color: var(--main-color-black);
-    font-weight: 600;
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 0;
+    gap: 30px;
 }
 
-form{
-    
-    width: 80%;
-}
-
-input, textarea{
+input,
+textarea {
     display: block;
-    width: 100%;
-    margin-bottom: 30px;
+    width: 400px;
+    /* margin-bottom: 30px; */
     text-transform: capitalize;
     border: none;
     border-radius: 5px;
-    height: 30px;
-    background:rgb(177, 177, 177);
+    background: rgb(205, 203, 203);
     color: #fff;
+    border: 0.5px solid var(--main-color-green);
+    color: var(--main-color-black);
+    font-size: 16px;
 }
 
-.btn{
+input {
+    height: 30px;
+}
+
+.btn {
     color: #fff;
     border: none;
     background-color: var(--main-color-orange);
@@ -158,104 +119,46 @@ input, textarea{
     color: var(--main-color);
     cursor: pointer;
     border-radius: 800px;
-    margin-bottom: 4em;
     transition: .5s;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--main-color);
-    color:var(--main-color-black);
+    color: var(--main-color-black);
 }
 
-textarea{
-    height: 30%;
-    background-color: #478056;
-} 
-
-.p{
-    display: flex;
-    background-color: var(--main-color-orange);
-    color:var(--main-color);
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: 75%;
-    margin-bottom: 0;
-    border-radius: 5px;
+.error{
+    color: red;
 }
 
-.p-sucess{
-    display: flex;
-    background-color: var(--main-color-green);
-    color:var(--main-color);
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: 75%;
-    margin-bottom: 0;
-    border-radius: 5px;
+.error p{
+    font-size: 12px;
 }
 
-@media only screen and (max-width: 992px) {
-    .contact-list {
-        width: 100%;
-        height: 400px;
 
-    }
-    .contact-form-wrapper {
-        width: 100%;
-        height: 500px;
-    }
+@media (max-width: 992px) {
 
-    .contact-list p{
-        text-align: center;
-    }
-
-    .contact-list h4{
-        text-align: left;
-        color: var(--main-color);
+    .contactMere {
+        width: 100vw;
+        margin: 0;
     }
 
     .contact-box {
         flex-direction: column;
-        width: 100%;
+        margin-bottom: 0;
     }
-}
-@media (max-width: 576px){
-    .contact-box{
-        margin: 0;
+
+    input,
+    textarea {
+        width: calc(400px - 120px);
     }
-    .contactMere{
-        padding-top: 0;
+
+    .titreContact {
+        background-color: var(--main-color-green);
+        border-top: 1px solid var(--main-color);
     }
+
     .titreContact h3{
-        font-size: 2em;
-    }
-    .titreContact{
-        position: absolute;
-        top: 30;
-    }
-
-    .contact-list h3{
-        font-size: 1.4em;
-    }
-
-    .contact-list p{
-        font-size: 1em;
-    }
-
-    .contact-list h4{
-        font-size: 1.2em;
-    }
-
-    .contact-form-wrapper, .contact-list{
-        border-radius: 0px;
-    }
-
-    form{
-        padding-top: 90px;
+        color: var(--main-color);
     }
 }
-    

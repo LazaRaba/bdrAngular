@@ -1,10 +1,9 @@
 .sliderContent {
-    margin: 30px;
+    margin: 40px;
     background: no-repeat url(/assets/images/imagesBdr/deco/dream.png);
     background-position: left;
     background-size: contain;
     overflow: hidden;
-
 }
 
 .titreSlider {
@@ -148,16 +147,19 @@ img.image-active {
 
 @media (max-width: 992px) {
     .sliderContent {
-        width: 100vw;
         margin: 0;
-        background: none;
+        /* background: none; */
     }
 
+    .container{
+        width: 100vw;
+    }
 
     #slide img {
         /* padding:0; */
         border-radius: 0;
         height: 325px;
+        margin: 0 auto;
     }
 
     .sliderClass {

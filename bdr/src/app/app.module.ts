@@ -12,7 +12,7 @@ import { ContactComponent } from './components/homeContent/contact/contact.compo
 import { AboutUsComponent } from './components/homeContent/about-us/about-us.component';
 import { SeparatorComponent } from './components/homeContent/separator/separator.component';
 import { CarouselModule } from './components/carousel/carousel.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
