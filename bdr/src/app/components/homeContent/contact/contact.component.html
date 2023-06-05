@@ -51,7 +51,7 @@
 
             <div class="contact-form-wrapper flex  aic jcc" data-aos="fade-up" data-aos-offset="200"
                 data-aos-easing="ease-in-sine">
-                <form class="form" [formGroup]="contactForm">
+                <form class="form" [formGroup]="contactForm" (ngSubmit)="envoyerMessage()">
                     <div class="formControl">
                         <label for="name">Nom</label>
                         <input type="text" id="name" name="name"  placeholder="Votre nom" [formControl]="name"  required>
@@ -95,7 +95,7 @@
                             </p>
                         </div>
                     </div>
-                    <button class="btn" [disabled]="!contactForm.valid" type="submit" (click)="handleSubmit()">Envoyer</button>
+                    <button class="btn" [disabled]="!contactForm.valid" type="submit" >Envoyer</button>
                 </form>               
             </div>
         </div>

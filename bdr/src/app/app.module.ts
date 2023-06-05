@@ -13,6 +13,7 @@ import { AboutUsComponent } from './components/homeContent/about-us/about-us.com
 import { SeparatorComponent } from './components/homeContent/separator/separator.component';
 import { CarouselModule } from './components/carousel/carousel.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     CarouselModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

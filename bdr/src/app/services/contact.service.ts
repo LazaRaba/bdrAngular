@@ -1,32 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
-import { FormGroup } from '@angular/forms';
-
+import { Contact } from '../models/contact';
+import { environment } from 'src/environments/environments';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
+  private apiUrl = environment.apiUrl;
 
-  private apiUrl = 'http://localhost:3000/contact';
+  
+  constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) {}
-
-  postMessageData(contactForm: FormGroup): Observable<any> {
-    const messageData = {
-      from: contactForm.value.email,
-      to: 'lazadevop@gmail.com',
-      subject: contactForm.value.subject,
-      text: contactForm.value.message
+  sendEmail(contact: Contact): Observable<Contact>{
+    console.log('Données du formulaire :', contact);
+    return this.http.post<Contact>(this.apiUrl, contact);  
     };
-    return this.http.post(this.apiUrl, messageData).pipe(
-      catchError(error => {
-        console.error('Erreur lors de l\'envoi de l\'email', error);
-        throw error;
-      })
-    );
+
   }
-  }
+
+
+
+
 
 
