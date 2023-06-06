@@ -24,9 +24,9 @@ header {
 header nav .logo img {
     width: 12em;
     height: 7em;
-    margin: 0;
+    display: flex;
+    justify-content: start;
 }
-
 
 header nav ul {
     justify-content: space-evenly;
@@ -34,7 +34,6 @@ header nav ul {
     height: 18vh;
     gap: 20px;
 }
-
 
 header nav ul li a {
     text-decoration: none;
@@ -84,17 +83,31 @@ nav ul li a:hover .icon i img {
     transition: 0.5s;
 }
 
+.burger {
+    display: none;
+}
+
+.burger img {
+    width: 3.5em;
+    height: 3.5em;
+    margin-right: 10px;
+}
 
 @media(max-width:992px) {
     .header {
         width: 100%;
+
     }
 
     header nav .logo img {
-    width: 7em;
-    height: 4.5em;
-    margin-left: 1em;
-}
+        width: 7em;
+        height: 4.5em;
+        margin-left: 1em;
+    }
+
+    .nav {
+        margin: 0 20px;
+    }
 
     .navbar {
         position: fixed;
@@ -109,6 +122,9 @@ nav ul li a:hover .icon i img {
         justify-content: center
     }
 
+    .burger {
+        display: block;
+    }
 }
 
 .close {
@@ -136,7 +152,7 @@ nav ul li a:hover .icon i img {
         font-size: 1em;
     }
 
-    nav  .logo img {
+    nav .logo img {
         width: 7em;
         height: 4.5em;
         margin: 0;

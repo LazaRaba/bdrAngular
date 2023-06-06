@@ -1,12 +1,22 @@
 <header>
-    <nav class="nav container flex jcsb aic">
+    <nav class="nav container flex jcsb aic">        
         <div class="logo">
-            <img src="/assets/images/imagesBdr/Logo/LogoFigma.png" alt="">
+            <a routerLink="/">
+                <img src="/assets/images/imagesBdr/Logo/LogoFigma.png" alt="">
+            </a>
         </div>
+        <!-- --------------Recuperer l'evenement depuis l'enfant aside-nav------  -->
+
+        <div class="burger" 
+        (click)="handleDisplayMenu()"
+        (mouseenter)="handleDisplayMenu()">
+                <img src="/assets/images/imagesBdr/Icon/hamburger.png" alt="">
+        </div>
+
         <div class="navbar">
             <ul class="ul flex aic">
                 <li class="navbar-menu">
-                    <a href="#">
+                    <a routerLink="/">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/accueil.png" alt=""></i>
                         </div>
@@ -14,7 +24,7 @@
                     </a>
                 </li>
                 <li class="navbar-menu">
-                    <a href="#">
+                    <a routerLink="/contact">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/call.png" alt=""></i>
                         </div>
@@ -22,7 +32,7 @@
                     </a>
                 </li>
                 <li class="navbar-menu">
-                    <a href="#">
+                    <a routerLink="/aboutus">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/plume.png" alt=""></i>
                         </div>
@@ -30,7 +40,7 @@
                     </a>
                 </li>
                 <li class="navbar-menu">
-                    <a href="#">
+                    <a routerLink="/signin">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/parents.png" alt=""></i>
                         </div>
@@ -38,15 +48,18 @@
                     </a>
                 </li>
                 <li class="navbar-menu">
-                    <a href="#">
+                    <a routerLink="signup">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/baby-boy.png" alt=""></i>
                         </div>
                         <div class="name">Connexion</div>
                     </a>
                 </li>
-                
+
             </ul>
         </div>
     </nav>
 </header>
+<app-aside-nav 
+(close)="handleCloseMobileMenu()"
+*ngIf="isDisplayMenu"></app-aside-nav>

@@ -11,6 +11,7 @@
     --main-color-black:#111;
     --main-color-orange:#F2790F;
     --main-color-green:#478056;
+    --main-color-yellow:rgb(255,255,214);
 }
 
 body{
@@ -145,6 +146,10 @@ a{
 
 .flex{
     display: flex;
+}
+
+.column{
+    flex-direction: column;
 }
 
 /*------------------*

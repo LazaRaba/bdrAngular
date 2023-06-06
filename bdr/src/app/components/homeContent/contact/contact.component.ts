@@ -41,8 +41,6 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void { }
 
   // Fonction de soumission du formulaire
-  // Fonction de soumission du formulaire
-  // Fonction de soumission du formulaire
 envoyerMessage() {
   const contact: Contact = {
     name: this.name.value,
@@ -50,10 +48,12 @@ envoyerMessage() {
     email: this.email.value,
     message: this.message.value,
   };
+  
   this.contactService.sendEmail(contact).subscribe({
     next: () => {
       this.messageSent = true;
       this.contactForm.reset();
+      alert('Message envoyé avec succès');
     },
     error: (error) => {
       this.errorMessage = 'Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer plus tard.';

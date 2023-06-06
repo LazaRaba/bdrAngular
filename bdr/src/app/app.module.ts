@@ -14,6 +14,9 @@ import { SeparatorComponent } from './components/homeContent/separator/separator
 import { CarouselModule } from './components/carousel/carousel.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SigninComponent } from './components/auth/signin/signin.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContainerComponent,
     ContactComponent,
     AboutUsComponent,
-    SeparatorComponent
+    SeparatorComponent,
+    SigninComponent,
+    SignupComponent,
+    AsideNavComponent
   ],
   imports: [
     BrowserModule,

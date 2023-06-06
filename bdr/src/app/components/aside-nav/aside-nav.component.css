@@ -1,0 +1,15 @@
+.aside-nav{
+    position: fixed;
+    background-color: var(--main-color-green);
+    color: var(--main-color-yellow);
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    z-index: 10;   
+}
+
+.ul{
+    height: 70%;
+    justify-content: space-around;
+    font-size: 20px;
+}
