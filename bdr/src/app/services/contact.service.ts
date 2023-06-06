@@ -8,14 +8,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = environment.apiUrl;
+  private apiUrlContact = environment.apiUrlContact;
 
   
   constructor(private http: HttpClient) { }
 
   sendEmail(contact: Contact): Observable<Contact>{
     console.log('Données du formulaire :', contact);
-    return this.http.post<Contact>(this.apiUrl, contact);  
+    return this.http.post<Contact>(this.apiUrlContact, contact);  
     };
 
   }

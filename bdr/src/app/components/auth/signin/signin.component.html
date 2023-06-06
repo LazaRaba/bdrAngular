@@ -1,19 +1,20 @@
 <div class="grand-parent container">
-    <form class="form-parent" action="" method="POST">
+    <form class="form-parent" [formGroup]="signinForm" (ngSubmit)="handleConnect()">
         <div class="form-container">
             <div class="form" id="sign-in-form">
                 <h1 class="signTitle">Connexion</h1>
                 <div class="fields">
-                    <input type="text" name="email"  placeholder="Votre  email" autocomplete="off">
-                    <input type="password" name="password" placeholder="Mot de passe" autocomplete="off">
+                    <input type="text" name="email"  placeholder="Votre  email" [formControl]='email'>
+                    <input type="password" name="password" placeholder="Mot de passe"  [formControl]='password'>
                     
                 </div>
                 <div class="submit-container">
                     <button type="submit" name="validate" class="btn">se connecter</button>
                     <p class="link"><a routerLink="/signup">Vous n'avez pas de compte ? Inscrivez-vous</a></p>
-                    <p class="link"><a href="reset_password.php">Mot de passe oublié</a></p>
+                    <p class="link"><a href="#">Mot de passe oublié</a></p>
                 </div>
             </div>
         </div>
     </form>
+    
 </div>

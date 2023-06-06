@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/homeContent/contact/contact.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
@@ -33,7 +32,7 @@ const routes: Routes = [
     component: SignupComponent,
     pathMatch:'full'
 
-  }
+  },
 ];
 
 @NgModule({
