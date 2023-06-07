@@ -122,11 +122,6 @@ input {
     transition: .5s;
 }
 
-.btn:hover {
-    background: var(--main-color);
-    color: var(--main-color-black);
-}
-
 .error{
     color: red;
 }
@@ -135,6 +130,10 @@ input {
     font-size: 12px;
 }
 
+
+.btn:disabled{
+    cursor: not-allowed;
+}
 
 @media (max-width: 992px) {
 
@@ -160,5 +159,9 @@ input {
 
     .titreContact h3{
         color: var(--main-color);
+    }
+
+    .btn:disabled{
+        opacity: 0.8;
     }
 }

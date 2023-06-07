@@ -5,7 +5,7 @@
 export const environment = {
     production: false,
     apiUrlContact: 'http://localhost:3000/contact',
-    apiUrlSignin: 'http://localhost:3000/signin'
+    apiUrlAuth: 'http://localhost:3000/auth',
 };
 
 

@@ -1,17 +1,64 @@
 <div class="grand-parent flex aic container">
-    <form class="form-parent">
+    <form class="form-parent" [formGroup]="signupForm" (ngSubmit)="handleCreateUser()">
         <div class="form-container">
             <div class="form" id="sign-in-form">
                 <h1 class="signTitle">Inscription</h1>
                 <div class="fields">
-                    <input type="text" name="nom" placeholder="Votre nom*">
-                    <input type="text" name="prenom" placeholder="Prenom de votre enfant*">
-                    <input type="text" name="valeur_code" placeholder="Votre code d'inscription*">
-                    <input type="text" name="email" placeholder="Votre  email*">
-                    <input type="password" name="password" placeholder="Mot de passe*">
+                    <div class="fields-item">
+                        <input type="text" name="name" placeholder="Votre nom *" [formControl]='name'>
+                        <div class="error" *ngIf="(name.dirty || name.touched) && !name.valid">
+                            <p *ngIf="name.hasError('required')">
+                                Le nom est obligatoire
+                            </p>
+                            <p *ngIf="!name.hasError('required')">
+                                Le nom doit avoir au moins 6 caractères
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fields-item">
+                        <input type="text" name="prename" placeholder="Prenom de votre enfant *" [formControl]='prename'>
+                        <div class="error" *ngIf="(prename.dirty || prename.touched) && !prename.valid">
+                            <p *ngIf="prename.hasError('required')">
+                                Le prénom est obligatoire
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fields-item">
+                        <input type="text" name="code" placeholder="Votre code d'inscription *" [formControl]='code'>
+                        <div class="error" *ngIf="(code.dirty || code.touched) && !code.valid">
+                            <p *ngIf="code.hasError('required')">
+                                Le code est obligatoire
+                            </p>
+                            <p *ngIf="!name.hasError('required')">
+                                Veuillez entrer un code valide
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fields-item">
+                        <input type="text" name="email" placeholder="Votre  email *" [formControl]='email'>
+                        <div class="error" *ngIf="(email.dirty || email.touched) && !email.valid">
+                            <p *ngIf="email.hasError('required')">
+                                L'adresse email est obligatoire
+                            </p>
+                            <p *ngIf="!email.hasError('required')">
+                                L'adresse email n'est pas valide
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fields-item">
+                        <input type="password" name="password" placeholder="Mot de passe *" [formControl]='password'>
+                        <div class="error" *ngIf="(password.dirty || password.touched) && !password.valid">
+                            <p *ngIf="password.hasError('required')">
+                                Le mot de passe est obligatoire 
+                            </p>
+                            <p *ngIf="!password.hasError('required')">
+                                Le mot de passe doit avoir au moins 6 caractères
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="submit-container">
-                    <button type="submit" name="validate" class="btn">s'inscrire</button>
+                    <button type="submit" class="btn" [disabled]="!this.signupForm.valid">s'inscrire</button>
                     <p class="link"><a routerLink="/signin">Avez vous un compte? Connectez-vous</a></p>
                 </div>
             </div>

@@ -32,23 +32,6 @@
     text-align: center;
 }
 
-.login {
-    margin-left: 200px;
-}
-
-.p-success {
-    color: var(--main-color);
-    background-color: green;
-    width: 50vw;
-    margin-top: 100px;
-    margin-bottom: -100px;
-    width: 890px;
-    border-radius: 10px;
-    height: 20px;
-    padding: 10px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
-    text-align: center;
-}
 
 .form-container {
     position: relative;
@@ -95,11 +78,15 @@
     width: 100%;
 }
 
+.fields-item{
+    margin-bottom: 30px;
+
+}
+
 input {
     display: block;
     margin-left: 50px;
     width: 80%;
-    margin-bottom: 30px;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -108,29 +95,14 @@ input {
     color: #fff;
 }
 
-.form-item {
+.error{
+    color: var(--main-color);
+}
+
+.error p{
+    font-size: 12px;
     margin-left: 50px;
-    width: 80%;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    background: rgb(177, 177, 177);
-    color: #fff;
-    height: 30px;
-}
 
-.form-item label {
-    font-size: 0.8em;
-    margin-left: 10px;
-}
-
-
-
-.form-item select {
-    margin-right: 10px;
-    width: 150px;
-    background-color: var(--main-color-blue);
-    border-radius: 5px;
-    height: 25px;
 }
 
 ::placeholder {
@@ -153,11 +125,15 @@ input {
     transition: .5s;
 }
 
-.btn:hover,
+.btn:disabled{
+    cursor: not-allowed;
+}
+
 input:focus {
     background: var(--main-color);
     color: var(--main-color-black);
 }
+
 
 a {
     color: var(--main-color);
@@ -184,10 +160,7 @@ a {
     margin-bottom: 30px;
 }
 
-#error {
-    color: red;
-    font-size: 14px;
-}
+
 
 
 @media screen and (max-width : 992px) {
@@ -216,6 +189,10 @@ a {
     input,
     .form-item {
         margin: 20px auto;
+    }
+
+    .btn:disabled{
+        opacity: 0.7;
     }
 
 }

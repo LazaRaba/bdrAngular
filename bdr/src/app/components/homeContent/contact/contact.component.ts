@@ -42,6 +42,9 @@ export class ContactComponent implements OnInit {
 
   // Fonction de soumission du formulaire
 envoyerMessage() {
+    console.log(this.contactForm.valid);
+
+
   const contact: Contact = {
     name: this.name.value,
     subject: this.subject.value,
