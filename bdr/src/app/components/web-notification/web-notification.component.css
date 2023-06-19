@@ -1,0 +1,7 @@
+.alert{
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    font-family: 'Comfortaa', cursive !important;
+    cursor: pointer;
+}

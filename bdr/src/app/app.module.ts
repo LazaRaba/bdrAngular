@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { httpInterceptorProviders } from './interceptors';
+import { AdminComponent } from './components/admin/admin.component';
+import { WebNotificationComponent } from './components/web-notification/web-notification.component';
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     SeparatorComponent,
     SigninComponent,
     SignupComponent,
-    AsideNavComponent
+    AsideNavComponent,
+    ParentComponent,
+    AdminComponent,
+    WebNotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +49,10 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
+    httpInterceptorProviders
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,11 @@
 <div class="grand-parent container">
-    <form class="form-parent" [formGroup]="signinForm" (ngSubmit)="handleConnect()">
+    <form class="form-parent" 
+
+    [formGroup]="signinForm" 
+    (ngSubmit)="f.form.valid && handleConnect()"
+    #f="ngForm"
+    novalidate
+    >
         <div class="form-container">
             <div class="form" id="sign-in-form">
                 <h1 class="signTitle">Connexion</h1>

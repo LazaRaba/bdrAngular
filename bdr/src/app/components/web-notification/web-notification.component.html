@@ -1,0 +1,5 @@
+
+<div *ngIf="notification?.message" class="alert alert-{{ notification.status }} text-center d-flex" role="alert">
+    <span class="btn-close" (click)="closeNotif()"></span>
+    <div [innerHTML]="notification?.message"></div>
+</div>

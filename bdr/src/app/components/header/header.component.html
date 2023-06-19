@@ -47,12 +47,20 @@
                         <div class="name">Parents</div>
                     </a>
                 </li>
-                <li class="navbar-menu">
+                <li class="navbar-menu" *ngIf="!isLoggedIn">
                     <a routerLink="signup">
                         <div class="icon">
                             <i class="fa"><img src="/assets/images/imagesBdr/Icon/baby-boy.png" alt=""></i>
                         </div>
                         <div class="name">Connexion</div>
+                    </a>
+                </li>
+                <li class="navbar-menu" *ngIf="isLoggedIn">
+                    <a routerLink="signup">
+                        <div class="icon">
+                            <i class="fa"><img src="/assets/images/imagesBdr/Icon/baby-boy.png" alt=""></i>
+                        </div>
+                        <div class="name" (click)="logout()">Deconnexion</div>
                     </a>
                 </li>
 

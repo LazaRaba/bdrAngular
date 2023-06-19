@@ -4,8 +4,11 @@
 
 export const environment = {
     production: false,
+    apiUrl: 'http://localhost:3000',
     apiUrlContact: 'http://localhost:3000/contact',
     apiUrlAuth: 'http://localhost:3000/auth',
+    apiUrlParent: 'http://localhost:3000/parent',
+    
 };
 
 
